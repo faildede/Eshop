@@ -1,0 +1,59 @@
+# Игнорировать сгенерированные файлы и папки сборки
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.userprefs
+*.cache
+*.suo
+*.vspscc
+*.vssscc
+_ReSharper*/
+JetBrains.Annotations.xml
+packages/
+
+# Игнорировать файлы конфигурации пользователя и среды разработки
+*.csproj.user
+*.sln.docstates
+*.sln.vspscc
+*.testsettings
+*.runsettings
+*.editorconfig.user
+*.vs/
+*.idea/
+
+packages/
+*.nupkg
+*.psmdcp
+[Ll]ogFiles/
+
+publish/
+*.application
+*.manifest
+setup.exe
+
+*.log
+*.config
+*.secrets.json
+*.vsdbg/
+*.coverage
+*.opencover.xml
+TestResults/
+_PublishedWebsites/
+
+.DS_Store
+Thumbs.db
+
+
+
+.ReSharper.GlobalSettings
+
+ComponentModelCache/
+
+StyleCop.Cache
+FxCopCache.xml
+
+# *.bak
+# *.orig
+# *.patch

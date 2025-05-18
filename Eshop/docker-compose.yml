@@ -1,0 +1,32 @@
+services:
+ mssql:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: mssql-server-instance
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Str0ngP@ssw0rd!"
+    volumes:
+      - mssql_data:/var/opt/mssql/data
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "/opt/mssql-tools/bin/sqlcmd",
+          "-S",
+          "localhost,1433",
+          "-U",
+          "sa",
+          "-P",
+          "${SA_PASSWORD}",
+          "-Q",
+          "SELECT 1;",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+volumes:
+  mssql_data:

@@ -1,0 +1,44 @@
+@Eshop_HostAddress = http://localhost:5051
+
+### Get all products
+GET {{Eshop_HostAddress}}/products
+Accept: application/json
+
+### Get a product by id
+GET {{Eshop_HostAddress}}/products/1
+Accept: application/json
+
+### Create a product
+POST {{Eshop_HostAddress}}/products
+Content-Type: application/json
+
+{
+    "title": "Phone 1",
+    "description": "This is a phone",
+    "price": 100,
+    "categoryId": 1
+}
+
+### Delete a product by id
+DELETE {{Eshop_HostAddress}}/products/1
+Accept: application/json
+
+### Get all categories
+GET {{Eshop_HostAddress}}/categories
+Accept: application/json
+
+### Get a category by id
+GET {{Eshop_HostAddress}}/categories/1
+Accept: application/json
+
+### Create a category
+POST {{Eshop_HostAddress}}/categories
+Content-Type: application/json
+
+{
+    "name": "Phones"
+}
+
+### Delete a category by id
+DELETE {{Eshop_HostAddress}}/categories/1
+Accept: application/json
